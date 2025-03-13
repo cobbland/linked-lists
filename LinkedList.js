@@ -5,7 +5,6 @@ export class LinkedList {
     head = null;
 
     append(value) {
-        // adds a new node containing value to the end of the list
         const newNode = new Node(value);
         if (this.head === null) {
             this.head = newNode;
@@ -15,13 +14,11 @@ export class LinkedList {
                 currentNode = currentNode.nextNode;
             }
             currentNode.nextNode = newNode;
-            // traverse to the end of the list
-            // make the last item point to newNode instead of null
+
         }
     }
 
     prepend(value) {
-        // adds a new node containing value to the start of the list
         const newNode = new Node(value);
         if (this.head === null) {
             this.head = newNode;
