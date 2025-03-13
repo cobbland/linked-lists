@@ -34,11 +34,10 @@ export class LinkedList {
         // returns the total number of nodes in the list
         let listSize = 0;
         let currentNode = this.head;
-        while (currentNode.nextNode !== null) {
+        while (currentNode !== null) {
             listSize++;
             currentNode = currentNode.nextNode;
         }
-        listSize++ // because the above loop stops before counting last node
         return listSize;
     }
 
@@ -81,6 +80,14 @@ export class LinkedList {
     contains(value) {
         // returns true if the passed in value is in the list 
         // and otherwise returns false.
+        let currentNode = this.head;
+        while (currentNode !== null) {
+            if (currentNode.value === value) {
+                return true;
+            }
+            currentNode = currentNode.nextNode;
+        }
+        return false;
     }
 
     find(value) {
