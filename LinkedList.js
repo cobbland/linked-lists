@@ -2,16 +2,39 @@ import { Node } from "./Node.js";
 
 export class LinkedList {
 
+    head = null;
+
     append(value) {
         // adds a new node containing value to the end of the list
+        const newNode = new Node(value);
+        if (this.head === null) {
+            this.head = newNode;
+        } else {
+            let currentNode = this.head;
+            while (currentNode.nextNode !== null) {
+                currentNode = currentNode.nextNode;
+            }
+            currentNode.nextNode = newNode;
+            // traverse to the end of the list
+            // make the last item point to newNode instead of null
+        }
     }
 
     prepend(value) {
         // adds a new node containing value to the start of the list
+        const newNode = new Node(value);
+        if (this.head === null) {
+            this.head = newNode;
+        } else {
+            newNode.nextNode = this.head;
+            this.head = newNode;
+        }
     }
 
     size() {
         // returns the total number of nodes in the list
+        let listSize = 0;
+
     } 
 
     head() {
