@@ -1,2 +1,2 @@
-# linked-lists
-A The Odin Project project
+# Linked Lists
+A The Odin Project project.
