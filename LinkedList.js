@@ -5,6 +5,7 @@ export class LinkedList {
     head = null;
 
     append(value) {
+        // adds a new node containing value to the end of the list
         const newNode = new Node(value);
         if (this.head === null) {
             this.head = newNode;
@@ -19,6 +20,7 @@ export class LinkedList {
     }
 
     prepend(value) {
+        // adds a new node containing value to the start of the list
         const newNode = new Node(value);
         if (this.head === null) {
             this.head = newNode;
@@ -31,8 +33,14 @@ export class LinkedList {
     size() {
         // returns the total number of nodes in the list
         let listSize = 0;
-
-    } 
+        let currentNode = this.head;
+        while (currentNode.nextNode !== null) {
+            listSize++;
+            currentNode = currentNode.nextNode;
+        }
+        listSize++ // because the above loop stops before counting last node
+        return listSize;
+    }
 
     head() {
         // returns the first node in the list
