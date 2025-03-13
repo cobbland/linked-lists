@@ -16,5 +16,7 @@ console.log(list.size());
 console.log(list.listHead());
 console.log(list.listTail());
 console.log(list.at(3));
+console.log(list.pop());
+
 
 console.log(list.toString());

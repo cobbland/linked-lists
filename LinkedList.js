@@ -57,7 +57,7 @@ export class LinkedList {
     }
 
     at(index) {
-        // returns the node at the given index
+        // returns the node at the given index (starting with 0)
         let currentIndex = 0;
         let currentNode = this.head;
         while (currentIndex < index) {
@@ -69,6 +69,13 @@ export class LinkedList {
 
     pop() {
         // removes the last element from the list
+        let currentNode = this.head;
+        let previousNode;
+        while (currentNode.nextNode !== null) {
+            previousNode = currentNode;
+            currentNode = currentNode.nextNode;
+        }
+        previousNode.nextNode = null;
     }
 
     contains(value) {
