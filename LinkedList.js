@@ -129,7 +129,7 @@ export class LinkedList {
             this.prepend(value);
         } else if (index === (this.size())) {
             this.append(value);
-        } else if (index >= this.size()) {
+        } else if (index >= this.size() || index < 0) {
             console.log("Index out of bounds.");
         } else {
             const newNode = new Node(value);
@@ -148,6 +148,21 @@ export class LinkedList {
 
     removeAt(index) {
         // that removes the node at the given index.
+        if (index === 0) {
+            this.head = this.head.nextNode;
+        } else if (index >= this.size() || index < 0) {
+            console.log("Index out of bounds.");
+        } else {
+            let previousNode;
+            let currentNode = this.head;
+            let currentIndex = 0;
+            while (currentIndex < index) {
+                previousNode = currentNode;
+                currentNode = currentNode.nextNode;
+                currentIndex++;
+            }
+            previousNode.nextNode = currentNode.nextNode;
+        }
     }
 
 }

@@ -11,7 +11,8 @@ list.append("hamster");
 list.append("snake");
 list.append("turtle");
 
-console.log(list);
+console.log(list.toString());
+
 console.log(list.size());
 console.log(list.listHead());
 console.log(list.listTail());
@@ -20,6 +21,10 @@ console.log(list.pop());
 console.log(list.contains("cat"));
 console.log(list.find("hamster"));
 
-list.insertAt("mouse", 5);
+list.insertAt("mouse", 2);
+
+console.log(list.toString());
+
+list.removeAt(4);
 
 console.log(list.toString());
