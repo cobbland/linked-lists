@@ -20,4 +20,6 @@ console.log(list.pop());
 console.log(list.contains("cat"));
 console.log(list.find("hamster"));
 
+list.insertAt("mouse", 5);
+
 console.log(list.toString());
