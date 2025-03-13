@@ -11,8 +11,10 @@ list.append("hamster");
 list.append("snake");
 list.append("turtle");
 
-console.log(list.head);
-
+console.log(list);
 console.log(list.size());
+console.log(list.listHead());
+console.log(list.listTail());
+console.log(list.at(3));
 
 console.log(list.toString());

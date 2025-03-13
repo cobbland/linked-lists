@@ -42,16 +42,29 @@ export class LinkedList {
         return listSize;
     }
 
-    head() {
+    listHead() {
         // returns the first node in the list
-    } 
+        return this.head;
+    }
 
-    tail() {
+    listTail() {
         // returns the last node in the list
+        let currentNode = this.head;
+        while (currentNode.nextNode !== null) {
+            currentNode = currentNode.nextNode;
+        }
+        return currentNode;
     }
 
     at(index) {
         // returns the node at the given index
+        let currentIndex = 0;
+        let currentNode = this.head;
+        while (currentIndex < index) {
+            currentIndex++;
+            currentNode = currentNode.nextNode;
+        }
+        return currentNode;
     }
 
     pop() {
