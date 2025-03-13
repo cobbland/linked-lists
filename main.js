@@ -17,6 +17,7 @@ console.log(list.listHead());
 console.log(list.listTail());
 console.log(list.at(3));
 console.log(list.pop());
-console.log(list.contains("turtle"));
+console.log(list.contains("cat"));
+console.log(list.find("hamster"));
 
 console.log(list.toString());
