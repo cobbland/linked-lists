@@ -70,7 +70,7 @@ export class LinkedList {
         // removes the last element from the list
         if (this.head === null) {
             return;
-        } else if (this.head.newNode === null) {
+        } else if (this.head.nextNode === null) {
             this.head = null;
             return;
         }
