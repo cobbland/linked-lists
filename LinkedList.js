@@ -115,6 +115,10 @@ export class LinkedList {
         // so you can print them out and preview them in the console. 
         // The format should be: ( value ) -> ( value ) -> ( value ) -> null
         let str = "";
+        if (this.head === null) {
+            str = "( null )";
+            return str;
+        }
         let currentNode = this.head;
         while (currentNode.nextNode !== null) {
             str += `( ${currentNode.value} ) -> `;
