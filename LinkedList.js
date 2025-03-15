@@ -68,6 +68,12 @@ export class LinkedList {
 
     pop() {
         // removes the last element from the list
+        if (this.head === null) {
+            return;
+        } else if (this.head.newNode === null) {
+            this.head = null;
+            return;
+        }
         let currentNode = this.head;
         let previousNode;
         while (currentNode.nextNode !== null) {
